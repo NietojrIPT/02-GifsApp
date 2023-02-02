@@ -7,7 +7,8 @@ import { GifRq, SearchGifRq } from '../interfaces/gifs.interface';
 })
 export class GifsService {
 
-  private apiKey: string = '4h6gTefyKqyHd2qgTTBgpoDZGf9Qb8vT'
+  private apikey: string = '4h6gTefyKqyHd2qgTTBgpoDZGf9Qb8vT';
+
   private _history: string[] = [];
 
   public resultado: GifRq[] = [];
