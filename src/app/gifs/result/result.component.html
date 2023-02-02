@@ -2,9 +2,15 @@
   <div *ngFor="let gif of result" class="col-md-4 col-sm-6">
     <div class="card">
       <div class="card-body">
-        <img [src]="gif.images.downsized_medium.url" [alt]="gif.title" class="card-img-top">
+        <img
+          [src]="gif.images.downsized_medium.url"
+          [alt]="gif.title"
+          class="card-img-top"
+        />
 
-        <p class="card-text"><span>{{ gif.title }}</span></p>
+        <p class="card-text">
+          <span>{{ gif.title }}</span>
+        </p>
       </div>
     </div>
   </div>
