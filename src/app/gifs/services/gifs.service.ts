@@ -22,7 +22,7 @@ export class GifsService {
   constructor(private http: HttpClient) {
     // if (localStorage.getItem('history')) {
     //   this._history = JSON.parse(localStorage.getItem('history')!)
-    // } 
+    // }
 
     this._history = JSON.parse(localStorage.getItem('history')!) || [];
     this.resultado = JSON.parse(localStorage.getItem('lastSearch')!) || [];
@@ -43,11 +43,10 @@ export class GifsService {
                 .set('limit', '10')
                 .set('q', query);
 
-    console.log(params.toString());
-    
-    
+    // console.log(params.toString());
+
+
     this.http.get<SearchGifRq>(`${this.SERVICE_URL}/search`,{ params }).subscribe((response) => {
-      console.log(response);
       this.resultado = response.data;
       localStorage.setItem('lastSearch' ,  JSON.stringify(this.resultado))
 });
